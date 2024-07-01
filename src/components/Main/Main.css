@@ -1,0 +1,29 @@
+.main {
+  width: 75%;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+    url('../../assets/image.png') center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  height: 50%;
+  position: relative;
+}
+
+.bottom {
+  height: 50%;
+}
+
+.endText {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 80px;
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+.app {
+  height: 100vh;
+  display: flex;
+  color: white;
+  background-color: #020230;
+}
