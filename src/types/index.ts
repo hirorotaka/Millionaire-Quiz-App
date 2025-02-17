@@ -7,7 +7,7 @@ export interface Question {
   }[];
 }
 
-export interface Pyramid {
+export interface MoneyPyramidType {
   id: number;
   amount: string;
 }

@@ -1,4 +1,4 @@
-import { Question, MoneyPyramid } from '../types/types';
+import { Question, MoneyPyramidType } from '../types';
 
 export const QUESTIONS: Question[] = [
   {
@@ -153,7 +153,7 @@ export const QUESTIONS: Question[] = [
   },
 ];
 
-export const MONEY_PYRAMID: MoneyPyramid[] = [
+export const MONEY_PYRAMID: MoneyPyramidType[] = [
   { id: 1, amount: '100' },
   { id: 2, amount: '200' },
   { id: 3, amount: '300' },

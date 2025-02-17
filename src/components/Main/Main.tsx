@@ -1,7 +1,7 @@
 import { Timer } from './Timer/Timer';
 import { Trivia } from './Trivia/Trivia';
+import { Question } from '../../types';
 import './Main.css';
-import { Question } from '../../types/types';
 
 interface MainProps {
   earned: string;

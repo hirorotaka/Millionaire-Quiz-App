@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
-import './App.css';
 import { Start } from './components/Start/Start';
 import { MoneyPyramid } from './components/MoneyPyramid/MoneyPyramid';
 import { Main } from './components/Main/Main';
 import { QUESTIONS, MONEY_PYRAMID } from './constants/gameData';
+import './App.css';
 
 function App() {
   const [userName, setUserName] = useState<string>('');

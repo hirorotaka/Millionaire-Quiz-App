@@ -1,8 +1,8 @@
-import { Pyramid } from '../../types/types';
+import { MoneyPyramidType } from '../../types';
 import './MoneyPyramid.css';
 
 interface MoneyPyramidProps {
-  moneyPyramid: Pyramid[];
+  moneyPyramid: MoneyPyramidType[];
   questionNumber: number;
 }
 

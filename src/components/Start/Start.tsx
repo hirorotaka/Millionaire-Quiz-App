@@ -1,6 +1,6 @@
 import { useRef } from 'react';
-import './Start.css';
 import MuteButton from '../MuteButton/MuteButton';
+import './Start.css';
 
 interface StartProps {
   setUserName: React.Dispatch<React.SetStateAction<string>>;
@@ -21,11 +21,11 @@ export const Start = ({ setUserName, isMuted, setIsMuted }: StartProps) => {
       <div className="start">
         <input
           className="startInput"
-          placeholder="enter your name"
+          placeholder="クイズへようこそ。名前を入れてください。"
           ref={inputRef}
         />
         <button className="startButton" onClick={handleClick}>
-          Start
+          クイズを始める
         </button>
         <MuteButton isMuted={isMuted} setIsMuted={setIsMuted} />
       </div>
