@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import useSound from 'use-sound';
-import play from '../../../sounds/play.mp3';
-import correct from '../../../sounds/correct.mp3';
-import wrong from '../../../sounds/wrong.mp3';
+import play from '../../../sounds/play.mp3?url';
+import correct from '../../../sounds/correct.mp3?url';
+import wrong from '../../../sounds/wrong.mp3?url';
 import { Question } from '../../../types';
 import MuteButton from '../../MuteButton/MuteButton';
 import './Trivia.css';
