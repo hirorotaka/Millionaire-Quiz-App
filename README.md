@@ -1,6 +1,6 @@
-# React + TypeScript + Vite
+# クイズミリオネア風のアプリの作成
 
-クイズミリオネア風のアプリの作成
+- URL:https://quiz-millionare.netlify.app
 
 ### 概要
 
@@ -15,4 +15,5 @@
 - ミュート機能あり
 
 ### 画面
+
 ![chrome-capture-2024-7-1](https://github.com/hirorotaka/Millionaire-Quiz-App/assets/153050316/566bf60d-01b8-45ce-b7ae-cf8c05c636b0)
