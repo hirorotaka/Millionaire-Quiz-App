@@ -3,9 +3,9 @@ import useSound from 'use-sound';
 import play from '../../../sounds/play.mp3';
 import correct from '../../../sounds/correct.mp3';
 import wrong from '../../../sounds/wrong.mp3';
-import './Trivia.css';
-import { Question } from '../../../types/types';
+import { Question } from '../../../types';
 import MuteButton from '../../MuteButton/MuteButton';
+import './Trivia.css';
 
 interface TriviaProps {
   data: Question[];
@@ -50,36 +50,37 @@ export const Trivia = ({
     setClassName('answer');
   }, [data, questionNumber]);
 
-  const delay = (duration: number, callback: () => void) => {
-    setTimeout(() => {
-      callback();
-    }, duration);
+  const delay = async (duration: number): Promise<void> => {
+    return new Promise((resolve) => setTimeout(resolve, duration));
   };
 
-  const handleClick = (answer: Answer) => {
+  const handleClick = async (answer: Answer) => {
     setSelectedAnswer(answer);
     setIsAnswered(true);
     setClassName('answer active');
-    delay(3000, () => {
-      setClassName(answer.correct ? 'answer correct' : 'answer wrong');
-    });
-    delay(5000, () => {
-      if (answer.correct) {
-        if (!isMuted) {
-          correctAnswer();
-        }
-        delay(1000, () => {
-          setQuestionNumber((prev) => prev + 1);
-        });
-      } else {
-        if (!isMuted) {
-          wrongAnswer();
-        }
-        delay(1000, () => {
-          setStop(true);
-        });
+
+    // 2秒待機して点滅アニメーション開始
+    await delay(2000);
+    setClassName(answer.correct ? 'answer correct' : 'answer wrong');
+
+    // 3秒待機して結果処理
+    await delay(3000);
+
+    if (answer.correct) {
+      if (!isMuted) {
+        correctAnswer();
       }
-    });
+      // 1秒待機して次の問題へ
+      await delay(1000);
+      setQuestionNumber((prev) => prev + 1);
+    } else {
+      if (!isMuted) {
+        wrongAnswer();
+      }
+      // 1秒待機してクイズ終了
+      await delay(1000);
+      setStop(true);
+    }
   };
 
   return (
