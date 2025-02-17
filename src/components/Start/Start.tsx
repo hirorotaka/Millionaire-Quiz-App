@@ -28,6 +28,11 @@ export const Start = ({ setUserName, isMuted, setIsMuted }: StartProps) => {
           クイズを始める
         </button>
         <MuteButton isMuted={isMuted} setIsMuted={setIsMuted} />
+        <div className="startText">
+          ※クイズを始めると音声がなります。ご注意ください。
+          <br />
+          音声は左端のミュートボタンを押して音声をオフにしてください。
+        </div>
       </div>
     </>
   );
